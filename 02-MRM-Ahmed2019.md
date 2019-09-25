@@ -1,4 +1,4 @@
-# NOTEBOOK PROJECT FORM: MRM Paper - Ahmed & Levesque 2019
+# PROJECT: MRM paper - Ahmed & Levesque 2019
 
 ## GENERAL DESCRIPTION 
 ### Aim
