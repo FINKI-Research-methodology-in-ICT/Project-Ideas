@@ -45,19 +45,19 @@ Being one of the fundamental parameters explaining the behaviour of net magnetiz
 
 For the sake of simplicity, T2 mapping can be seen as an exponential decay curve fitting problem, where each data point along the decay curve (red curve in the figure below) is sampled by employing a fast spin-echo sequence with multiple echo times (TE). 
 
-**%%%%%%IMAGE%%%%%%**
+![alt text](assets/00/img_1.png "Image 1")
 
 T2 value is calculated by fitting one of the following signal expressions to the measured data. M is the signal amplitude, M0 describes a constant known as equilibrium magnetization and TE stands for echo time:
 
-**%%%%%%IMAGE%%%%%%**
+![alt text](assets/00/img_2.png "Image 2")
 
 An additional constant term can be chosen (optional) to be included as a fitting term:  
 
-**%%%%%%IMAGE%%%%%%**
+![alt text](assets/00/img_3.png "Image 3")
 
 Below is a snapshot from a web application that can perform T2 fitting http://www.mritoolbox.com/ParameterFitting.html
 
-**%%%%%%IMAGE%%%%%%**
+![alt text](assets/00/img_4.png "Image 4")
 
 ### Further reading 
 
@@ -89,6 +89,8 @@ In qMRLab, there is a model available for T2 mapping that can generate synthetic
    * [Msig,~] = fsesignal(T1,T2,TE,TR,0,ETL);
    * plot(linspace(TE,TE*ETL,ETL),abs(Msig));
    * xlabel('Echo Time (TE)'); ylabel('Signal amplitude');
+
+    ![alt text](assets/00/img_5.png "Image 5")
 
    Create an interactive figure (or a simple dashboard) that allows users to synthetically generate signals using Bloch equation. Plot the signal with respect to the echo times, fit data using qMRLab and overlay the fitted curve. You have the liberty to choose (or make user choose) which parameters are going to kept constant and which parameter(s) is/are going to be varied. For example, repeating the above example for a range of T1 parameters (on x-axis) and showing fitted T2 values (y-axis) for a fixed T2 value would be really cool. Use your creativity to do even more!      
 
